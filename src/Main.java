@@ -9,12 +9,22 @@ public class Main {
         //Una vez hecho esto, haz lo mismo con la clase Trabajador que herede de Persona, y con una variable salario que solo tenga la clase Trabajador.
 
         Cliente Cliente = new Cliente();
-        Cliente.edad = 30;
+        Trabajador trabajador = new Trabajador();
+
         Cliente.nombre = "Andrea";
+        Cliente.edad = 30;
         Cliente.telefono = 2059841;
+        Cliente.credito = 750.20;
 
+        System.out.println("El Cliente: " + Cliente.nombre + ", tiene una Edad de: " + Cliente.edad + " Años y su Telefono es: " + Cliente.telefono
+                + " y su Credito Disponible es: " + Cliente.credito + "$");
 
-
+        trabajador.nombre = "Carlos";
+        trabajador.edad = 28;
+        trabajador.telefono = 582910244;
+        trabajador.salario = 2000.32;
+        System.out.println("El Trabajador: " + trabajador.nombre + ", tiene una Edad de: " + trabajador.edad + " Años y su Telefono es: " + trabajador.telefono
+                + " y su Salario es de: " + trabajador.salario + "$");
     }
 }
 
@@ -25,9 +35,9 @@ class Persona{
 }
 
 class Cliente extends Persona{
-    String credito;
+    double credito;
 }
 
 class Trabajador extends Persona{
-    int salario;
+    double salario;
 }
